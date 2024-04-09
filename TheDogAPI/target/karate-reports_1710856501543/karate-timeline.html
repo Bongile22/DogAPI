@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.1:23]","start":1710856385999,"end":1710856387888,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.1:23] 15:53:05.999-15:53:07.888 creates votes for negative tests"},{"id":2,"group":2,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.2:24]","start":1710856385999,"end":1710856387809,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.2:24] 15:53:05.999-15:53:07.809 creates votes for negative tests"},{"id":3,"group":3,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.3:25]","start":1710856385999,"end":1710856388928,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.3:25] 15:53:05.999-15:53:08.928 creates votes for negative tests"},{"id":4,"group":4,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.4:26]","start":1710856385999,"end":1710856387810,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.4:26] 15:53:05.999-15:53:07.810 creates votes for negative tests"},{"id":5,"group":5,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.5:27]","start":1710856385999,"end":1710856387810,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.5:27] 15:53:05.999-15:53:07.810 creates votes for negative tests"},{"id":6,"group":4,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.6:28]","start":1710856387817,"end":1710856389499,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.6:28] 15:53:07.817-15:53:09.499 creates votes for negative tests"},{"id":7,"group":2,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.7:29]","start":1710856387817,"end":1710856388801,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.7:29] 15:53:07.817-15:53:08.801 creates votes for negative tests"},{"id":8,"group":5,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.8:30]","start":1710856387817,"end":1710856388630,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.8:30] 15:53:07.817-15:53:08.630 creates votes for negative tests"},{"id":9,"group":1,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.9:31]","start":1710856387894,"end":1710856388853,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[1.9:31] 15:53:07.894-15:53:08.853 creates votes for negative tests"},{"id":10,"group":5,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.1:65]","start":1710856388646,"end":1710856389433,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.1:65] 15:53:08.646-15:53:09.433 creates votes for positive tests","className":"failed"},{"id":11,"group":2,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.2:66]","start":1710856388807,"end":1710856389597,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.2:66] 15:53:08.807-15:53:09.597 creates votes for positive tests","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.3:67]","start":1710856388857,"end":1710856389769,"title":"src\/test\/java\/Breed_VotesAPI\/Features\/createVotes[2.3:67] 15:53:08.857-15:53:09.769 creates votes for positive tests","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

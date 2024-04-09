@@ -1,9 +1,0 @@
-Feature:
-  Background:
-    * url URL
-    *  header x-api-key = TOKEN
-
-  Scenario:
-    #* def brId = $breedId
-    Given path 'breeds/', breedId
-    When method get
