@@ -19,7 +19,7 @@ public class BreedNotesTestParallel {
     @Test
     void testParallel() {
 //        C:\API_Testing\MyKarateProject\TheDogAPI\src\test\java\
-        Results results = Runner.path("classpath:Breed_VotesAPI/Feature/createVotes.feature")
+        Results results = Runner.path("classpath:Breed_VotesAPI/Features/createVotes.feature")
                 .outputCucumberJson(true)
                 .parallel(5);
         generateReport(results.getReportDir());
