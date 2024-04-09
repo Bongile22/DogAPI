@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class BreedNotesTestParallel {
     @Test
     void testParallel() {
-        Results results = Runner.path("C:\\API_Testing\\MyKarateProject\\TheDogAPI\\src\\test\\java\\Breed_VotesAPI\\Features\\getAllBreeds.feature")
+        Results results = Runner.path("C:\\API_Testing\\MyKarateProject\\TheDogAPI\\src\\test\\java\\Breed_VotesAPI\\Features\\createVotes.feature")
                 .outputCucumberJson(true)
                 .parallel(5);
         generateReport(results.getReportDir());
