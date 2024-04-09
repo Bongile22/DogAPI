@@ -28,5 +28,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn compile --file BreedAPI/pom.xml
+      run: mvn clean test -Dtest=BreedNotesTestParallel --file BreedAPI/pom.xml
 
