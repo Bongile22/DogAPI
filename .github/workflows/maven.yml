@@ -10,8 +10,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: - Bongile
-	      - master
+    branches: 
+      - Bongile
+      - master
   pull_request:
     branches: [ "Bongile" ]
 
