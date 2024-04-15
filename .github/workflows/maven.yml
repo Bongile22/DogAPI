@@ -29,10 +29,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Clean compile
+    - name: Clean
       run: mvn clean install --file TheDogAPI/pom.xml
 
-    - name: Build with Maven
+    - name: Compile
+      run: mvn compile --file TheDogAPI/pom.xml
+
+    - name: Run tests
       run: mvn clean test -Dtest=BreedNotesRunner --file TheDogAPI/pom.xml
       if: (github.ref == 'refs/heads/Bongile' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
 
